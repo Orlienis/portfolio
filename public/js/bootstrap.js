@@ -1459,16 +1459,16 @@
       DROPUP: 'dropup',
       DROPRIGHT: 'dropright',
       DROPLEFT: 'dropleft',
-      MENURIGHT: 'dropdown-menu-right',
-      MENULEFT: 'dropdown-menu-left',
+      MENURIGHT: 'dropdown-lang-right',
+      MENULEFT: 'dropdown-lang-left',
       POSITION_STATIC: 'position-static'
     };
     var Selector = {
       DATA_TOGGLE: '[data-toggle="dropdown"]',
       FORM_CHILD: '.dropdown form',
-      MENU: '.dropdown-menu',
+      MENU: '.dropdown-lang',
       NAVBAR_NAV: '.navbar-nav',
-      VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled):not(:disabled)'
+      VISIBLE_ITEMS: '.dropdown-lang .dropdown-item:not(.disabled):not(:disabled)'
     };
     var AttachmentMap = {
       TOP: 'top-start',
@@ -1564,7 +1564,7 @@
               referenceElement = this._config.reference[0];
             }
           } // If boundary is not `scrollParent`, then set position to `static`
-          // to allow the menu to "escape" the scroll parent's boundaries
+          // to allow the lang to "escape" the scroll parent's boundaries
           // https://github.com/twbs/bootstrap/issues/24251
 
 
@@ -1797,7 +1797,7 @@
         //  - If space key => not a dropdown command
         //  - If key is other than escape
         //    - If key is not up or down => not a dropdown command
-        //    - If trigger inside the menu => not a dropdown command
+        //    - If trigger inside the lang => not a dropdown command
         if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $$$1(event.target).closest(Selector.MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
           return;
         }
@@ -3373,7 +3373,7 @@
     };
     var ClassName = {
       DROPDOWN_ITEM: 'dropdown-item',
-      DROPDOWN_MENU: 'dropdown-menu',
+      DROPDOWN_MENU: 'dropdown-lang',
       ACTIVE: 'active'
     };
     var Selector = {
@@ -3680,7 +3680,7 @@
       CLICK_DATA_API: "click" + EVENT_KEY + DATA_API_KEY
     };
     var ClassName = {
-      DROPDOWN_MENU: 'dropdown-menu',
+      DROPDOWN_MENU: 'dropdown-lang',
       ACTIVE: 'active',
       DISABLED: 'disabled',
       FADE: 'fade',
@@ -3693,7 +3693,7 @@
       ACTIVE_UL: '> li > .active',
       DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]',
       DROPDOWN_TOGGLE: '.dropdown-toggle',
-      DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+      DROPDOWN_ACTIVE_CHILD: '> .dropdown-lang .active'
       /**
        * ------------------------------------------------------------------------
        * Class Definition
