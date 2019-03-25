@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Language from './component/lang/language';
+import Language from './components/lang/language';
 
 
 class App extends Component {

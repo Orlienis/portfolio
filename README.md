@@ -6,6 +6,12 @@ git remote add origin https://github.com/Orlienis/portfolio.git
 
 git push -u origin master
 
+Sass:
+
+npm install -g sass
+
+https://www.jetbrains.com/help/phpstorm/transpiling-sass-less-and-scss-to-css.html
+
 ## Available Scripts
 
 In the project directory, you can run:

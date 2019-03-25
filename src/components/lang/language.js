@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './language.css';
 
 class Language extends Component {
     render() {
@@ -6,7 +7,7 @@ class Language extends Component {
 
         return (
             <div>
-                <h3>Language Section</h3>
+                <h3 className={'text'}>Language Section</h3>
                 <select>
                     {this.props.lang.map(i => {
                         return <option> {i} </option>
