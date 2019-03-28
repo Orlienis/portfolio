@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 import Language from './components/lang/language';
 import './components/lang/language.css';
 import Utils from './util/STATIC_DATA';

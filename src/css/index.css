@@ -1,0 +1,94 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#aside {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  background-color: #444444;
+  color: #B1B1B1;
+}
+#aside #lang_bar {
+  background-color: #444444;
+}
+#aside #lang_bar #lang, #aside #lang_bar #season {
+  position: relative;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 40% !important;
+  float: left;
+}
+#aside #logo_img {
+  height: 20vh;
+}
+#aside #logo_img img {
+  width: 60%;
+  padding-top: 10%;
+}
+#aside #logo_img #search {
+  width: 90%;
+}
+#aside #logo_img #search input {
+  width: 100%;
+  height: auto;
+  background-color: #282828;
+  color: #B1B1B1;
+  border-style: none;
+  padding: 1rem;
+}
+#aside nav {
+  height: 50vh !important;
+}
+#aside nav a {
+  color: #B1B1B1;
+  height: 7vh !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#aside #aside_footer {
+  position: absolute;
+  width: 100%;
+  height: 13vh;
+  bottom: 0px !important;
+}
+#aside #aside_footer .tel {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#aside #aside_footer .tel:before {
+  content: "";
+  color: gray;
+}
+#aside #aside_footer .tel:after {
+  content: " (857) 576-0282";
+  color: gray;
+}
+#aside #aside_footer a {
+  color: #B1B1B1;
+}
+#aside #aside_footer a:hover {
+  color: #71dd8a;
+}
+#aside #aside_footer * {
+  justify-content: center;
+}
+
+.main {
+  position: absolute;
+  right: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

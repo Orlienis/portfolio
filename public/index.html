@@ -4,6 +4,8 @@
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/>
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -17,27 +19,365 @@
 <body class="container-fluid">
 <noscript>You need to enable JavaScript to run this app.</noscript>
 
-<aside id="aside">
-    <div id="lang"></div>
-    <div id="logo_img"></div>
-    <div id="search?"></div>
-    <nav></nav>
-    <section id="info-media"></section>
-    <footer id="aside_footer"></footer>
-</aside>
+<div class="row">
+    <div id="aside" class="col-3 col-md-2">
+        <aside>
+            <div id="lang_bar" class="fixed-top position-absolute w-100">
+                <div id="lang"></div>
+                <div id="season"><p>SEASON</p></div>
+            </div>
 
-<main id="root">
-    <section id="principal">
-        <header></header>
-        <article>
-            <header></header>
-            <section></section>
-            <footer></footer>
-        </article>
-    </section>
-</main>
-<footer id="footer"></footer>
+            <div id="logo_img" class="mt-5 pt-5 d-flex flex-column justify-content-center align-items-center">
+                <img src="https://www.bcndp.ca/sites/all/themes/bcndp.themes/bcndp/blocks/block--central-official-logos/images/download-ndp-logo/BCNDP-logo-white.png"/>
+                <div class="pt-5" id="search"><input type="search" placeholder="Search..."></div>
+            </div>
 
 
+            <nav class="nav d-flex flex-column mt-5 pt-1">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Categories</a>
+                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" href="#">Pages</a>
+                <a class="nav-link" href="#">Blogs</a>
+                <a class="nav-link" href="#">My Account</a>
+                <a class="nav-link disabled" href="#">About Us</a>
+            </nav>
+
+            <footer id="aside_footer">
+                <section id="info-media">
+                    <div class="media text-white d-flex justify-content-center align-items-center">
+                        <p class="tel text-muted mr-2 fa"></p>
+                        <div>
+                            <a href=""><i class="fab fa-facebook-square fa-3x mr-1"></i></a>
+                            <a href=""><i class="fab fa-twitter-square fa-3x mr-1"></i></a>
+                            <a href=""><i class="fab fa-linkedin fa-3x mr-1"></i></a>
+                        </div>
+                    </div>
+                </section>
+                <p class="text-muted text-center py-3">Copyright 2019. All Rights Reserved.</p>
+            </footer>
+        </aside>
+    </div>
+
+    <div class="main col-9 col-md-10 bg-success">
+        <main id="root">
+            <section id="principal">
+                <header></header>
+                <article>
+                    <header></header>
+                    <section>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae urna tortor. Sed
+                            consequat
+                            tempor nisl, id molestie lacus scelerisque non. Quisque interdum tortor quam, vitae pretium
+                            arcu
+                            condimentum nec. Etiam malesuada odio quam, in gravida purus imperdiet non. In vel varius
+                            ipsum.
+                            Nam luctus orci eget lectus ultrices, sit amet blandit lacus consequat. Vivamus at purus
+                            vitae
+                            libero malesuada faucibus ac et nisi. Proin eu risus sollicitudin, blandit augue in,
+                            tristique
+                            tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar nisi id
+                            ligula
+                            dapibus vestibulum. Proin vestibulum imperdiet mollis. Morbi vitae faucibus erat. Fusce
+                            semper
+                            tellus in arcu malesuada, vitae lacinia risus tempor. Pellentesque consequat, odio vel
+                            molestie
+                            ullamcorper, turpis neque aliquam sapien, ac finibus erat massa vel lacus.
+                        </p>
+
+                    </section>
+                    <footer></footer>
+                </article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</div>
 </body>
 </html>

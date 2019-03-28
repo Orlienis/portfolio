@@ -9,7 +9,7 @@ class Language extends Component {
             <div className="select_container">
                 <select>
                     {this.props.lang.map(i => {
-                        return <option className={"bg"}> {i} </option>
+                        return <option> {i} </option>
                     })}
                 </select>
             </div>

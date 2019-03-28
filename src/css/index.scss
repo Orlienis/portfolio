@@ -1,0 +1,116 @@
+$full_screen: 100vh;
+$aside_color: #444444; //#304051;
+$aside_font_color: #B1B1B1;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
+
+
+#aside {
+  position: fixed;
+  height: $full_screen;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  background-color: $aside_color;
+  color: $aside_font_color;
+
+  & #lang_bar {
+    background-color: $aside_color;
+
+    #lang, #season {
+      position: relative;
+      margin-right: 5%;
+      margin-left: 5%;
+      width: 40% !important;
+      float: left;
+    }
+  }
+
+  & #logo_img {
+    height: 20vh;
+
+    & img {
+      width: 60%;
+      padding-top: 10%;
+    }
+
+    & #search {
+      width: 90%;
+
+      & input {
+        width: 100%;
+        height: auto;
+        background-color: #282828;
+        color: $aside_font_color;
+        border-style: none;
+        padding: 1rem;
+      }
+    }
+
+  }
+
+  & nav {
+    height: 50vh !important;
+
+    & a {
+      color: $aside_font_color;
+      height: 7vh !important;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  & #aside_footer {
+    position: absolute;
+    width: 100%;
+    height: 13vh;
+    bottom: 0px !important;
+
+    & .tel {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      &:before {
+        content: "\f095";
+        color: gray;
+      }
+
+      &:after {
+        content: " (857) 576-0282";
+        color: gray;
+      }
+    }
+
+    & a{
+      color: $aside_font_color;
+      &:hover{
+        color: #71dd8a;
+      }
+    }
+
+    * {
+      justify-content: center;
+    }
+  }
+
+}
+
+
+.main {
+  position: absolute;
+  right: 0;
+}

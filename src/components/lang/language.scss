@@ -1,4 +1,4 @@
-$background: #2c3e50;
+$background: #444444; //#2c3e50;
 $select-color: #fff;
 $select-background: #c0392b;
 $select-width: 220px;
@@ -20,7 +20,7 @@ select {
 .select_container {
   position: relative;
   display: block;
-  width: 50%;
+  width: 100%; //50
   height: 3em;
   line-height: 3;
   background: $background;
@@ -45,7 +45,7 @@ select {
   right: 0;
   bottom: 0;
   padding: 0 1em;
-  background: #34495e;
+  background: $background;
   pointer-events: none;
 }
 

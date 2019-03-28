@@ -8,17 +8,17 @@ select {
   outline: 0;
   box-shadow: none;
   border: 0 !important;
-  background: #2c3e50 none;
+  background: #444444 none;
 }
 
 /* Custom Select */
 .select_container {
   position: relative;
   display: block;
-  width: 50%;
+  width: 100%;
   height: 3em;
   line-height: 3;
-  background: #2c3e50;
+  background: #444444;
   overflow: hidden;
   border-radius: 0.25em;
 }
@@ -40,7 +40,7 @@ select {
   right: 0;
   bottom: 0;
   padding: 0 1em;
-  background: #34495e;
+  background: #444444;
   pointer-events: none;
 }
 
