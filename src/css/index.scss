@@ -1,5 +1,5 @@
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #fafafa;
@@ -62,42 +62,43 @@ a:focus {
   background: #7386D5;
   color: #fff;
   transition: all 0.3s;
-}
 
-#sidebar.active {
-  margin-left: -250px;
-}
+  &.active {
+    margin-left: -250px;
+  }
 
-#sidebar .sidebar-header {
-  padding: 20px;
-  background: #6d7fcc;
-}
+  & .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+  }
 
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid #47748b;
-}
+  & ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+  }
 
-#sidebar ul p {
-  color: #fff;
-  padding: 10px;
-}
+  & ul p {
+    color: #fff;
+    padding: 10px;
+  }
 
-#sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
-}
+  & ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+  }
 
-#sidebar ul li a:hover {
-  color: #7386D5;
-  background: #fff;
-}
+  & ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+  }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-  color: #fff;
-  background: #6d7fcc;
+  & ul li.active > a,
+  a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+  }
+
 }
 
 a[data-toggle="collapse"] {
@@ -120,26 +121,27 @@ ul ul a {
 
 ul.CTAs {
   padding: 20px;
+
+  & a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    &.download {
+      background: #fff;
+      color: #7386D5;
+    }
+
+    &.article,
+    &.article:hover {
+      background: #6d7fcc !important;
+      color: #fff !important;
+    }
+  }
 }
 
-ul.CTAs a {
-  text-align: center;
-  font-size: 0.9em !important;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-a.download {
-  background: #fff;
-  color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-  background: #6d7fcc !important;
-  color: #fff !important;
-}
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -153,11 +155,12 @@ a.article:hover {
   position: absolute;
   top: 0;
   right: 0;
+
+  &.active {
+    width: 100%;
+  }
 }
 
-#content.active {
-  width: 100%;
-}
 
 /* ---------------------------------------------------
     MEDIAQUERIES
