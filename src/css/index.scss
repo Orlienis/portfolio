@@ -17,6 +17,10 @@ code {
   monospace;
 }
 
+/*
+* ASIDE MENU STARTS HERE
+*/
+
 
 #aside {
   position: fixed;
@@ -26,6 +30,39 @@ code {
   padding: 0px;
   background-color: $aside_color;
   color: $aside_font_color;
+
+  /*
+  * SHOWING THE BUTTON ON TOP OF EVERYTHING
+  */
+
+  & label[for="mobil_toggle"] {
+    display: none;
+  }
+
+  /*
+  * HERE YOU CAN MANIPULATE THE <ASIDE> FROM THE MOBILE TOGGLE
+  */
+
+  #mobil_toggle {
+    left: -500%;
+    display: none;
+
+    &:checked {
+      & ~ label {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+      }
+
+      & ~ #aside_container {
+        display: none !important;
+      }
+    }
+  }
+
+  /*
+  * LANGUAGE BAR STYLES
+  */
 
   & #lang_bar {
     background-color: $aside_color;
@@ -38,6 +75,10 @@ code {
       float: left;
     }
   }
+
+  /*
+  * LOGO AND SEARCH FIELD STYLES
+  */
 
   & #logo_img {
     height: 20vh;
@@ -62,6 +103,10 @@ code {
 
   }
 
+  /*
+  * NAVBAR STYLES
+  */
+
   & nav {
     height: 50vh !important;
 
@@ -72,6 +117,10 @@ code {
       font-weight: bold;
     }
   }
+
+  /*
+  * FOOTER STYLES
+  */
 
   & #aside_footer {
     position: absolute;
@@ -95,9 +144,10 @@ code {
       }
     }
 
-    & a{
+    & a {
       color: $aside_font_color;
-      &:hover{
+
+      &:hover {
         color: #71dd8a;
       }
     }
@@ -109,8 +159,74 @@ code {
 
 }
 
+/*
+* MEDIA QUERY FOR EXTRA SMALL DEVICES (portrait phones, less than 576px)
+*/
 
-.main {
+@media (max-width: 575.98px) {
+  #aside {
+    z-index: 1;
+    position: fixed;
+    height: auto;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+
+    /*
+    * HIDE EVERYTHING INSIDE <ASIDE_CONTAINER>
+    */
+
+    & #aside_container {
+      display: none !important;
+    }
+
+    label[for="mobil_toggle"] {
+      display: initial;
+      position: relative;
+      z-index: 10000;
+      float: right;
+    }
+
+    #mobil_toggle {
+      display: none;
+
+      &:checked {
+        & ~ label {
+          color: #fff;
+          background-color: #28a745;
+          border-color: #28a745;
+        }
+
+        & ~ #aside_container {
+          display: initial !important;
+
+          & #lang_bar {
+            & #lang {
+              display: none;
+            }
+          }
+
+          & #aside_footer {
+            position: relative;
+          }
+        }
+      }
+    }
+
+  }
+
+  #main_container {
+    position: static;
+    height: auto;
+  }
+}
+
+
+/*
+* MAIN CONTENT STARTS HERE
+*/
+
+
+#main_container {
   position: absolute;
   right: 0;
 }

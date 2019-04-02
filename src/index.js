@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
 import App from './App';
+import Language from './components/lang/language'
 import * as serviceWorker from './serviceWorker';
+
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(<App />, document.getElementById('lang'));
-ReactDOM.render(<App />, document.getElementById('season'));
+ReactDOM.render(<Language lang={["Spring","Winter","Fall"]} />, document.getElementById('season'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

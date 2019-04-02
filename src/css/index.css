@@ -11,6 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+/*
+* ASIDE MENU STARTS HERE
+*/
 #aside {
   position: fixed;
   height: 100vh;
@@ -19,6 +22,39 @@ code {
   padding: 0px;
   background-color: #444444;
   color: #B1B1B1;
+  /*
+  * SHOWING THE BUTTON ON TOP OF EVERYTHING
+  */
+  /*
+  * HERE YOU CAN MANIPULATE THE <ASIDE> FROM THE MOBILE TOGGLE
+  */
+  /*
+  * LANGUAGE BAR STYLES
+  */
+  /*
+  * LOGO AND SEARCH FIELD STYLES
+  */
+  /*
+  * NAVBAR STYLES
+  */
+  /*
+  * FOOTER STYLES
+  */
+}
+#aside label[for=mobil_toggle] {
+  display: none;
+}
+#aside #mobil_toggle {
+  left: -500%;
+  display: none;
+}
+#aside #mobil_toggle:checked ~ label {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+#aside #mobil_toggle:checked ~ #aside_container {
+  display: none !important;
 }
 #aside #lang_bar {
   background-color: #444444;
@@ -86,7 +122,56 @@ code {
   justify-content: center;
 }
 
-.main {
+/*
+* MEDIA QUERY FOR EXTRA SMALL DEVICES (portrait phones, less than 576px)
+*/
+@media (max-width: 575.98px) {
+  #aside {
+    z-index: 1;
+    position: fixed;
+    height: auto;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    /*
+    * HIDE EVERYTHING INSIDE <ASIDE_CONTAINER>
+    */
+  }
+  #aside #aside_container {
+    display: none !important;
+  }
+  #aside label[for=mobil_toggle] {
+    display: initial;
+    position: relative;
+    z-index: 10000;
+    float: right;
+  }
+  #aside #mobil_toggle {
+    display: none;
+  }
+  #aside #mobil_toggle:checked ~ label {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  #aside #mobil_toggle:checked ~ #aside_container {
+    display: initial !important;
+  }
+  #aside #mobil_toggle:checked ~ #aside_container #lang_bar #lang {
+    display: none;
+  }
+  #aside #mobil_toggle:checked ~ #aside_container #aside_footer {
+    position: relative;
+  }
+
+  #main_container {
+    position: static;
+    height: auto;
+  }
+}
+/*
+* MAIN CONTENT STARTS HERE
+*/
+#main_container {
   position: absolute;
   right: 0;
 }
