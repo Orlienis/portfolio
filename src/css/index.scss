@@ -55,7 +55,7 @@ a:focus {
 #sidebar {
   width: 250px;
   position: fixed;
-  top: 0;
+  top: 0 !important;
   left: 0;
   height: 100vh;
   z-index: 999;
@@ -67,9 +67,37 @@ a:focus {
     margin-left: -250px;
   }
 
+  &.compress {
+    width: 80px;
+    font-size: .7rem;
+    text-align: center;
+    display: block; /* REMOVE */
+    transition: all 0ms;
+
+    & svg {
+      width: 25%;
+      height: auto;
+    }
+
+    & .sidebar-header *:not(img) {
+      display: none;
+    }
+  }
+
   & .sidebar-header {
-    padding: 20px;
+    padding: 15px;
     background: #6d7fcc;
+    display: block;
+    text-align: center;
+    min-height: 18vh;
+
+    & *:not(img) {
+      margin-top: 1rem;
+    }
+
+    & small.text-green {
+      color: #71dd8a;
+    }
   }
 
   & ul.components {
@@ -86,6 +114,10 @@ a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+
+    & svg {
+      margin: 0 .5rem 0 .5rem;
+    }
   }
 
   & ul li a:hover {
@@ -159,6 +191,10 @@ ul.CTAs {
   &.active {
     width: 100%;
   }
+
+  &.compress {
+    width: calc(100% - 70px);
+  }
 }
 
 
@@ -173,13 +209,24 @@ ul.CTAs {
   #sidebar.active {
     margin-left: 0;
   }
+  #sidebar.compress {
+    margin-left: 0 !important;
+
+    & .sidebar-header{
+      min-height: 5vh;
+    }
+  }
   #content {
     width: 100%;
   }
   #content.active {
     width: calc(100% - 250px);
   }
-  #sidebarCollapse span {
+  #content.compress {
+    width: calc(100% - 70px) !important;
+  }
+
+  #sidebarCollapse span, #sidebarCompress span {
     display: none;
   }
 }
