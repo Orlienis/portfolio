@@ -3,28 +3,12 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import * as serviceWorker from './serviceWorker';
 import LIST from "./components/LIST";
-
-const items = [
-    {
-        name: 'Amy Farha',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        subtitle: 'Vice President'
-    },
-    {
-        name: 'Chris Jackson',
-        avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        subtitle: 'Vice Chairman'
-    },
-]
+import Utils from './util/Static_data'
 
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(
-    <LIST>
-        /*<ITEM></ITEM>
-        <ITEM></ITEM>
-        <ITEM></ITEM>*/
-    </LIST>
+    <LIST header={""} items={Utils.MENU}/>
     , document.getElementById('here'));
 
 // If you want your app to work offline and load faster, you can change

@@ -80,16 +80,25 @@ a:focus {
   display: none;
 }
 #sidebar .sidebar-header {
-  padding: 15px;
+  padding: 10px;
   background: #6d7fcc;
   display: block;
   text-align: center;
-  min-height: 18vh;
 }
 #sidebar .sidebar-header *:not(img) {
   margin-top: 1rem;
 }
 #sidebar .sidebar-header small.text-green {
+  color: #71dd8a;
+}
+#sidebar .sidebar-footer {
+  padding: 15px;
+  text-align: center;
+  bottom: 0;
+  font-size: 0.9rem;
+  position: absolute;
+}
+#sidebar .sidebar-footer small.text-green {
   color: #71dd8a;
 }
 #sidebar ul.components {
@@ -180,6 +189,7 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
 @media (max-width: 768px) {
   #sidebar {
     margin-left: -250px;
+    height: 100vh;
   }
 
   #sidebar.active {
@@ -188,9 +198,6 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
 
   #sidebar.compress {
     margin-left: 0 !important;
-  }
-  #sidebar.compress .sidebar-header {
-    min-height: 5vh;
   }
 
   #content {
