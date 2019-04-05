@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import Language from './components/lang/language';
+import LANGUAJE from './components/lang/LANGUAJE';
 import './components/lang/language.css';
-import Utils from './util/STATIC_DATA';
+import Utils from './util/Static_data';
 
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Language lang={Utils.COUNTRIES} />
+          <LANGUAJE lang={Utils.COUNTRIES} />
         </header>
       </div>
     );
