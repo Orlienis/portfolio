@@ -55,35 +55,36 @@ a:focus {
 #sidebar {
   font-family: "Poppins", "Open Sans", sans-serif;
   line-height: 1.7rem;
-  width: 250px;
+  width: 12.5rem;
   position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
   z-index: 999;
   background: #444;
-  color: #B0B0B0;
+  color: #FFF;
   font-size: 0.9rem;
   transition: all 0.3s;
 }
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: -12.5rem;
 }
 #sidebar #lang {
   background: #3e3e3e !important;
   top: 0px;
 }
 #sidebar.compress {
-  width: 80px;
+  width: 5rem;
   font-size: 0.7rem;
   text-align: center;
-  display: block;
-  /* REMOVE */
   transition: all 0ms;
 }
 #sidebar.compress svg {
   width: 25%;
   height: auto;
+}
+#sidebar.compress .sidebar-header {
+  padding-bottom: 1rem;
 }
 #sidebar.compress .sidebar-header *:not(img) {
   display: none;
@@ -95,32 +96,42 @@ a:focus {
   position: absolute;
 }
 #sidebar.compress .sidebar-footer svg {
-  width: 100%;
+  width: auto;
+}
+#sidebar.compress .sidebar-footer button {
+  width: 30% !important;
 }
 #sidebar.compress .sidebar-footer span, #sidebar.compress .sidebar-footer small {
   display: none;
 }
 #sidebar .sidebar-header {
-  padding: 10px;
   background: #3e3e3e;
   display: block;
   text-align: center;
 }
-#sidebar .sidebar-header *:not(img) {
+#sidebar .sidebar-header * {
   margin-top: 1rem;
 }
-#sidebar .sidebar-header small.text-green {
-  color: #71dd8a;
+#sidebar .sidebar-header h5 {
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+#sidebar .sidebar-header h5 > small {
+  font-size: 0.9rem;
 }
 #sidebar .sidebar-footer {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
   padding: 15px;
   text-align: center;
   bottom: 0;
   font-size: 0.9rem;
-  position: absolute;
+  width: 12.5rem;
 }
 #sidebar .sidebar-footer button {
-  width: 100%;
+  font-size: 100%;
 }
 #sidebar .sidebar-footer small.text-green {
   color: #71dd8a;
@@ -192,7 +203,7 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-  width: calc(100% - 250px);
+  width: calc(100% - 200px);
   min-height: 100vh;
   transition: all 0.3s;
   position: absolute;
@@ -203,7 +214,7 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
   width: 100%;
 }
 #content.compress {
-  width: calc(100% - 70px);
+  width: calc(100% - 80px);
 }
 #content > div {
   position: relative;
@@ -224,7 +235,7 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
   }
 
   #sidebar {
-    margin-left: -250px;
+    margin-left: -12.5rem;
     height: 100vh !important;
   }
 
@@ -241,11 +252,11 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
   }
 
   #content.active {
-    width: calc(100% - 250px);
+    width: calc(100% - 200px);
   }
 
   #content.compress {
-    width: calc(100% - 70px) !important;
+    width: calc(100% - 80px) !important;
   }
 
   #sidebarCollapse span, #sidebarCompress span {

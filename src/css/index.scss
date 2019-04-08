@@ -1,7 +1,9 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
 
-$nav-height : 3rem;
+$nav-height: 3rem;
+$nav-width: 12.5rem;
+$nav-width-compress: 5rem;
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -60,19 +62,19 @@ a:focus {
 #sidebar {
   font-family: 'Poppins', "Open Sans", sans-serif;
   line-height: 1.7rem;
-  width: 250px;
+  width: $nav-width;
   position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
   z-index: 999;
   background: #444;
-  color: #B0B0B0;
+  color: #FFF;
   font-size: .9rem;
   transition: all 0.3s;
 
   &.active {
-    margin-left: -250px;
+    margin-left: -$nav-width;
   }
 
   & #lang {
@@ -81,10 +83,9 @@ a:focus {
   }
 
   &.compress {
-    width: 80px;
+    width: $nav-width-compress;
     font-size: .7rem;
     text-align: center;
-    display: block; /* REMOVE */
     transition: all 0ms;
 
     & svg {
@@ -92,19 +93,28 @@ a:focus {
       height: auto;
     }
 
-    & .sidebar-header *:not(img) {
-      display: none;
+    & .sidebar-header {
+      padding-bottom: 1rem;
+
+      & *:not(img) {
+        display: none;
+      }
+
     }
 
 
-    & .sidebar-footer {
+    & .sidebar-footer { //Compressed
       padding: 10px;
       text-align: center;
       bottom: 0;
       position: absolute;
 
       & svg {
-        width: 100%;
+        width: auto;
+      }
+
+      & button {
+        width: 30% !important;
       }
 
       span, small {
@@ -116,30 +126,39 @@ a:focus {
   }
 
   & .sidebar-header {
-    padding: 10px;
     background: #3e3e3e;
     display: block;
     text-align: center;
 
-    & *:not(img) {
+    & * {
       margin-top: 1rem;
     }
 
-    & small.text-green {
-      color: #71dd8a;
+    & h5 {
+      color: white;
+      font-size: 1rem;
+      padding-bottom: 1rem;
+
+      & > small {
+        font-size: .9rem;
+      }
     }
   }
 
   & .sidebar-footer {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
     padding: 15px;
     text-align: center;
     bottom: 0;
     font-size: .9rem;
-    position: absolute;
+    width: $nav-width;
 
     & button {
-      width: 100%;
+      font-size: 100%;
     }
+
     & small.text-green {
       color: #71dd8a;
     }
@@ -226,7 +245,7 @@ ul.CTAs {
 ----------------------------------------------------- */
 
 #content {
-  width: calc(100% - 250px);
+  width: calc(100% - 200px); // $nav-width
   //padding: 40px;
   min-height: 100vh;
   transition: all 0.3s;
@@ -239,18 +258,19 @@ ul.CTAs {
   }
 
   & nav {
-   // margin: -40px;
+    // margin: -40px;
   }
 
   &.compress {
-    width: calc(100% - 70px);
+    width: calc(100% - 80px); // $nav-width-compress
   }
 
-  & > div{
+  & > div {
     position: relative;
     top: -$nav-height + .5rem;
   }
-  & > div.container-fluid div.jumbotron{
+
+  & > div.container-fluid div.jumbotron {
     min-height: 100vh !important;
     background: url("https://wallpapersultra.net/wp-content/uploads/HD-Wallpapers-Of-Girls-1280%C3%97800-Girls-Pics-Wallpapers.jpg") center;
     background-size: cover;
@@ -267,7 +287,7 @@ ul.CTAs {
     height: $nav-height + 1rem;
   }
   #sidebar {
-    margin-left: -250px;
+    margin-left: -$nav-width;
     height: 100vh !important;
   }
   #sidebar.active {
@@ -280,10 +300,10 @@ ul.CTAs {
     width: 100%;
   }
   #content.active {
-    width: calc(100% - 250px);
+    width: calc(100% - 200px); // $nav-width
   }
   #content.compress {
-    width: calc(100% - 70px) !important;
+    width: calc(100% - 80px) !important; //$nav-width-compress
   }
 
   #sidebarCollapse span, #sidebarCompress span {
