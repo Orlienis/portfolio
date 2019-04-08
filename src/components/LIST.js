@@ -6,7 +6,7 @@ class LIST extends Component {
         let {items,header} = this.props;
 
         return (
-            <ul className={"list-unstyled components"}>
+            <ul className={"list-unstyled"}>
                 {header != "" ? <p>{header}</p> : null}
                 {
                     items.map((i,key) => {

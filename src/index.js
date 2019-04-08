@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './css/index.css';
 import * as serviceWorker from './serviceWorker';
 import LIST from "./components/LIST";
-import Utils from './util/Static_data'
+import Utils from './util/Static_data';
 
 
-//ReactDOM.render(<App />, document.getElementById('root'));
+//ReactDOM.render(<LANGUAJE lang={Utils.COUNTRIES} />, document.getElementById('lang'));
 ReactDOM.render(
     <LIST header={""} items={Utils.MENU}/>
     , document.getElementById('here'));

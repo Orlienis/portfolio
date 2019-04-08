@@ -15,8 +15,8 @@ class Item extends Component {
     render() {
         let {icon,text,link,linkStyle,style} = this.props;
         return (
-            <li className={style}>
-                <LINK href={link} text={text} icon={<ICON style={icon}/>} style={linkStyle} />
+            <li className={style || null}>
+                <LINK href={link} text={text} icon={<ICON style={icon}/> || null} style={linkStyle} />
             </li>
         );
     }

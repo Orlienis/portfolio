@@ -11,7 +11,7 @@ export default class Utils{
             {
                 icon: 'fas fa-home text-warning',
                 link: '',
-                style: '',
+                style: 'active',
                 text: 'HOME',
             },
             {
@@ -37,6 +37,11 @@ export default class Utils{
                 link: 'pages',
                 style: '',
                 text: 'Pages'
+            },{
+                icon: 'fas fa-arrow-up  text-secondary',
+                link: 'pages',
+                style: '',
+                text: 'Lastest'
             },
         ]
     }

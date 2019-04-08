@@ -1,16 +1,20 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+$nav-height : 3rem;
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #fafafa;
+  font-size: 16px;
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1em;
+  font-family: "Open Sans", sans-serif;
+  //font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: #444;
 }
 
 a,
@@ -28,6 +32,7 @@ a:focus {
   border-radius: 0;
   margin-bottom: 40px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  height: $nav-height;
 }
 
 .navbar-btn {
@@ -53,18 +58,26 @@ a:focus {
 }
 
 #sidebar {
+  font-family: 'Poppins', "Open Sans", sans-serif;
+  line-height: 1.7rem;
   width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 999;
-  background: #7386D5;
-  color: #fff;
+  background: #444;
+  color: #B0B0B0;
+  font-size: .9rem;
   transition: all 0.3s;
 
   &.active {
     margin-left: -250px;
+  }
+
+  & #lang {
+    background: #3e3e3e !important;
+    top: 0px;
   }
 
   &.compress {
@@ -82,11 +95,29 @@ a:focus {
     & .sidebar-header *:not(img) {
       display: none;
     }
+
+
+    & .sidebar-footer {
+      padding: 10px;
+      text-align: center;
+      bottom: 0;
+      position: absolute;
+
+      & svg {
+        width: 100%;
+      }
+
+      span, small {
+        display: none;
+      }
+
+    }
+
   }
 
   & .sidebar-header {
     padding: 10px;
-    background: #6d7fcc;
+    background: #3e3e3e;
     display: block;
     text-align: center;
 
@@ -106,24 +137,27 @@ a:focus {
     font-size: .9rem;
     position: absolute;
 
+    & button {
+      width: 100%;
+    }
     & small.text-green {
       color: #71dd8a;
     }
   }
 
-  & ul.components {
+  & ul {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-  }
+    border-bottom: 1px solid #3e3e3e;
 
-  & ul p {
-    color: #fff;
-    padding: 10px;
+    & p {
+      color: #fff;
+      padding: 10px;
+    }
   }
 
   & ul li a {
     padding: 10px;
-    font-size: 1.1em;
+    //font-size: 1.1em;
     display: block;
 
     & svg {
@@ -140,6 +174,7 @@ a:focus {
   a[aria-expanded="true"] {
     color: #fff;
     background: #6d7fcc;
+    border-left: #fff solid .1rem !important;
   }
 
 }
@@ -192,7 +227,7 @@ ul.CTAs {
 
 #content {
   width: calc(100% - 250px);
-  padding: 40px;
+  //padding: 40px;
   min-height: 100vh;
   transition: all 0.3s;
   position: absolute;
@@ -203,8 +238,22 @@ ul.CTAs {
     width: 100%;
   }
 
+  & nav {
+   // margin: -40px;
+  }
+
   &.compress {
     width: calc(100% - 70px);
+  }
+
+  & > div{
+    position: relative;
+    top: -$nav-height + .5rem;
+  }
+  & > div.container-fluid div.jumbotron{
+    min-height: 100vh !important;
+    background: url("https://wallpapersultra.net/wp-content/uploads/HD-Wallpapers-Of-Girls-1280%C3%97800-Girls-Pics-Wallpapers.jpg") center;
+    background-size: cover;
   }
 }
 
@@ -214,9 +263,12 @@ ul.CTAs {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+  .navbar {
+    height: $nav-height + 1rem;
+  }
   #sidebar {
     margin-left: -250px;
-    height: 100vh;
+    height: 100vh !important;
   }
   #sidebar.active {
     margin-left: 0;
