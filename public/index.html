@@ -39,23 +39,6 @@
         </div>
 
         <div id="here"></div>
-        <!-- <li>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <i class="fas fa-spinner fa-pulse"></i>Pages
-                </a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
-            </li> -->
-
 
         <div class="sidebar-footer">
             <button type="button" class="btn btn-outline-success">
@@ -160,6 +143,8 @@
         </div>
 
     </div>
+
+    <div class="overlay"></div>
 </div>
 
 <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -178,11 +163,17 @@
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar, #content').toggleClass('active');
             $('.collapse.in').toggleClass('in');
+            $('.overlay').addClass('active');
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
         });
 
         $('#sidebarCompress').on('click', function () {
             $('#sidebar, #content').toggleClass('compress');
+        });
+
+        $('.overlay').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('#content,.overlay').removeClass('active');
         });
     });
 </script>

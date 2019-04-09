@@ -59,18 +59,34 @@ a:focus {
   width: 100%;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0%;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  /* transparent black */
+  background: rgba(0, 0, 0, 0.7);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 998;
+  opacity: 0;
+  /* animate the transition */
+  transition: all 0.5s ease-in-out;
+}
+
 #sidebar {
   font-family: 'Poppins', "Open Sans", sans-serif;
-  line-height: 1.7rem;
+  min-height: 100vh;
   width: $nav-width;
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 100vh;
   z-index: 999;
   background: #444;
   color: #FFF;
   font-size: .9rem;
+  line-height: 1.7rem;
   transition: all 0.3s;
 
   &.active {
@@ -163,6 +179,7 @@ a:focus {
       color: #71dd8a;
     }
   }
+
 
   & ul {
     padding: 20px 0;
@@ -283,24 +300,37 @@ ul.CTAs {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+
+  .overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
   .navbar {
     height: $nav-height + 1rem;
   }
+
   #sidebar {
     margin-left: -$nav-width;
-    height: 100vh !important;
+
+    &.active {
+      margin-left: 0;
+    }
+
+    & .sidebar-footer {
+      position: fixed;
+    }
   }
-  #sidebar.active {
-    margin-left: 0;
-  }
+
   #sidebar.compress {
     margin-left: 0 !important;
   }
+
   #content {
     width: 100%;
   }
   #content.active {
-    width: calc(100% - 200px); // $nav-width
+    width: 100%; //calc(100% - 200px); //PONERLO FIJO AL 100%
   }
   #content.compress {
     width: calc(100% - 80px) !important; //$nav-width-compress
