@@ -106,16 +106,16 @@ a:focus {
   display: none;
 }
 #sidebar.compress .sidebar-footer {
-  padding: 10px;
-  text-align: center;
+  width: 100%;
   bottom: 0;
+  left: 0;
   position: absolute;
 }
 #sidebar.compress .sidebar-footer svg {
   width: auto;
 }
 #sidebar.compress .sidebar-footer button {
-  width: 30% !important;
+  width: 100% !important;
 }
 #sidebar.compress .sidebar-footer span, #sidebar.compress .sidebar-footer small {
   display: none;
@@ -137,9 +137,7 @@ a:focus {
   font-size: 0.9rem;
 }
 #sidebar .sidebar-footer {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
+  position: absolute;
   padding: 15px;
   text-align: center;
   bottom: 0;
@@ -262,7 +260,7 @@ ul.CTAs a.article, ul.CTAs a.article:hover {
     margin-left: 0;
   }
   #sidebar .sidebar-footer {
-    position: fixed;
+    position: absolute;
   }
 
   #sidebar.compress {
